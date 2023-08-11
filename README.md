@@ -43,3 +43,48 @@
 🚀 Let's collaborate and create something incredible. Whether it's web applications, open-source projects, or just a good chat about technology, I'm ready!
 
 ![Profile Stats](https://github-readme-stats.vercel.app/api?username=machado-rodolfo&show_icons=true&theme=radical)
+![Profile Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=machado-rodolfo&layout=compact&langs_count=7&theme=dra)
+
+<div align="left">
+  <img alt="Dev-Ruby" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
+  <img alt="Dev-Rails" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" />
+  <img alt="Dev-Javascript" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+  <img alt="Dev-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+  <img alt="Dev-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+  <img alt="Dev-C#" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+  <img alt="Dev-Coffescript" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/coffeescript/coffeescript-original-wordmark.svg" />
+  </div>
+<div align="left">
+  <a href="https://www.linkedin.com/in/rodolfommachado">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin" />
+  </a>
+  <a href="mailto:machado.rodolfo@outlook.com">
+    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</div>
+
+![Snake animation](https://github.com/machado-rodolfo/machado-rodolfo/blob/output/github-contribution-grid-snake.svg)
+
+name: Generate Datas
+on:
+schedule: # execute every 12 hours
+- cron: "* */12 * * *"
+workflow_dispatch:
+jobs:
+build:
+name: Jobs to update datas
+runs-on: ubuntu-latest
+steps:
+# Snake Animation
+- uses: Platane/snk@master
+id: snake-gif
+with:
+github_user_name: machado-rodolfo
+svg_out_path: dist/github-contribution-grid-snake.svg
+- uses: crazy-max/ghaction-github-pages@v2.1.3
+with:
+target_branch: output
+build_dir: dist
+env:
+GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
